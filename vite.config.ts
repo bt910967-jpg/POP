@@ -9,14 +9,5 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 1500,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          three: ['three'],
-          r3f: ['@react-three/fiber', '@react-three/drei'],
-          vendor: ['react', 'react-dom', 'framer-motion', 'lucide-react'],
-        },
-      },
-    },
   },
 })

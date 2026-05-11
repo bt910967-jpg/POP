@@ -1,6 +1,6 @@
 import { useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { ContactShadows, Environment } from '@react-three/drei';
+import { ContactShadows } from '@react-three/drei';
 import * as THREE from 'three';
 import { AppState } from '../utils/types';
 import { useBlinkAnimation } from '../hooks/useBlinkAnimation';
@@ -258,7 +258,6 @@ export function PoopCharacter3D({ appState, volume, mouthOpen }: PoopCharacter3D
             blur={2.5}
             far={3}
           />
-          <Environment preset="city" />
         </Suspense>
       </Canvas>
     </div>
