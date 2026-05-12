@@ -1,5 +1,7 @@
 export type AppState = 'idle' | 'listening' | 'processing' | 'playback';
 
+export type CharacterType = 'chick' | 'poop' | 'penguin';
+
 export type VoiceMode = 'normal' | 'chipmunk' | 'monster' | 'robot' | 'echo' | 'slow';
 
 export interface VoiceModeConfig {

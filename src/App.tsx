@@ -8,11 +8,12 @@ import { useMicrophone } from './hooks/useMicrophone';
 import { useAudioRecorder } from './hooks/useAudioRecorder';
 import { useLipSync } from './hooks/useLipSync';
 import { playWithEffect } from './utils/audioEffects';
-import { AppState, VoiceMode } from './utils/types';
+import { AppState, VoiceMode, CharacterType } from './utils/types';
 
 export default function App() {
   const [appState, setAppState] = useState<AppState>('idle');
   const [voiceMode, setVoiceMode] = useState<VoiceMode>('chipmunk');
+  const [character, setCharacter] = useState<CharacterType>('chick');
   const [playbackAnalyser, setPlaybackAnalyser] = useState<AnalyserNode | null>(null);
 
   const audioCtxRef = useRef<AudioContext | null>(null);
@@ -141,6 +142,7 @@ export default function App() {
       <Hero
         appState={appState}
         voiceMode={voiceMode}
+        character={character}
         volume={displayVolume}
         mouthOpen={mouthOpen}
         hasRecording={!!audioBuffer}
@@ -149,6 +151,7 @@ export default function App() {
         onStartRecording={handleStartRecording}
         onStopRecording={handleStopRecording}
         onReplay={handleReplay}
+        onCharacterChange={setCharacter}
       />
 
       <VoiceModeSelector

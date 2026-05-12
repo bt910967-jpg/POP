@@ -2,11 +2,13 @@ import { motion } from 'framer-motion';
 import { PoopCharacter3D } from './PoopCharacter3D';
 import { ControlButtons } from './ControlButtons';
 import { AudioVisualizer } from './AudioVisualizer';
-import { AppState, VoiceMode, VOICE_MODES } from '../utils/types';
+import { CharacterSelector } from './CharacterSelector';
+import { AppState, VoiceMode, CharacterType, VOICE_MODES } from '../utils/types';
 
 interface HeroProps {
   appState: AppState;
   voiceMode: VoiceMode;
+  character: CharacterType;
   volume: number;
   mouthOpen: number;
   hasRecording: boolean;
@@ -15,6 +17,7 @@ interface HeroProps {
   onStartRecording: () => void;
   onStopRecording: () => void;
   onReplay: () => void;
+  onCharacterChange: (c: CharacterType) => void;
 }
 
 const stateLabel: Record<AppState, { text: string; color: string }> = {
@@ -27,6 +30,7 @@ const stateLabel: Record<AppState, { text: string; color: string }> = {
 export function Hero({
   appState,
   voiceMode,
+  character,
   volume,
   mouthOpen,
   hasRecording,
@@ -35,6 +39,7 @@ export function Hero({
   onStartRecording,
   onStopRecording,
   onReplay,
+  onCharacterChange,
 }: HeroProps) {
   const label = stateLabel[appState];
   const currentMode = VOICE_MODES.find((m) => m.id === voiceMode);
@@ -83,6 +88,9 @@ export function Hero({
         </motion.p>
       </motion.div>
 
+      {/* Character selector */}
+      <CharacterSelector selected={character} onChange={onCharacterChange} />
+
       {/* 3D Character */}
       <motion.div
         initial={{ opacity: 0, scale: 0.85 }}
@@ -92,6 +100,7 @@ export function Hero({
       >
         <PoopCharacter3D
           appState={appState}
+          character={character}
           volume={volume}
           mouthOpen={mouthOpen}
         />
