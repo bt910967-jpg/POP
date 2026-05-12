@@ -71,7 +71,7 @@ export function Hero({
         className="text-center mb-2 relative z-10"
       >
         <h1 className="font-kanit font-900 text-6xl sm:text-7xl md:text-8xl hero-heading leading-none tracking-tight">
-          Talking Poop
+          Talking Chick
         </h1>
         <motion.p
           initial={{ opacity: 0 }}

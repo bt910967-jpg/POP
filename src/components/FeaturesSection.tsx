@@ -20,7 +20,7 @@ const features = [
     icon: Box,
     title: '3D Animation',
     description:
-      'Fully interactive 3D poop emoji rendered with Three.js and react-three-fiber.',
+      'Fully interactive 3D baby chick rendered with Three.js and react-three-fiber.',
     accent: '#A78BFA',
   },
   {

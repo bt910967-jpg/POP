@@ -22,7 +22,7 @@ export function VoiceModeSelector({ selected, onChange, disabled }: VoiceModeSel
             Voice Modes
           </h2>
           <p className="font-kanit font-300 text-[#D7E2EA]/50 text-lg">
-            Pick a filter. The poop will sound absolutely ridiculous.
+            Pick a filter. The chick will sound absolutely ridiculous.
           </p>
         </motion.div>
 

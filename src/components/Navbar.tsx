@@ -30,9 +30,9 @@ export function Navbar() {
         whileHover={{ scale: 1.04 }}
         transition={{ type: 'spring', stiffness: 400 }}
       >
-        <span className="text-2xl">💩</span>
+        <span className="text-2xl">🐥</span>
         <span className="font-kanit font-700 text-lg tracking-widest uppercase hero-heading">
-          Talking Poop
+          Talking Chick
         </span>
       </motion.div>
 

@@ -11,14 +11,14 @@ export function Footer() {
     >
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2">
-          <span className="text-xl">💩</span>
+          <span className="text-xl">🐥</span>
           <span className="font-kanit font-600 text-sm tracking-widest uppercase hero-heading">
-            Talking Poop 3D
+            Talking Chick 3D
           </span>
         </div>
 
         <p className="font-kanit font-300 text-xs tracking-widest text-[#D7E2EA]/30 uppercase">
-          Talking Poop 3D &copy; 2026 — Made with zero shame
+          Talking Chick 3D &copy; 2026 — Made with zero shame
         </p>
 
         <div className="flex gap-6">
